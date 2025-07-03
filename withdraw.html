@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Withdraw - BlackStar</title>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+</head>
+<body>
+  <h2>Withdraw Request</h2>
+  <input type="number" id="amount" placeholder="Enter amount (₹)" />
+  <input type="text" id="upi" placeholder="Enter UPI ID" />
+  <button onclick="submitWithdraw()">Request Withdraw</button>
+  <p id="status"></p>
+
+  <h3>Your Withdrawal History</h3>
+  <table border="1">
+    <thead>
+      <tr><th>Amount</th><th>UPI</th><th>Status</th><th>Date</th></tr>
+    </thead>
+    <tbody id="history-body">
+    </tbody>
+  </table>
+
+  <script src="withdraw.js"></script>
+</body>
+</html>
